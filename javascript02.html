@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<h1>JavaScript Assignment 02</h1>
+
+<p id="demo">
+<p><br><img src = "http://i0.kym-cdn.com/photos/images/original/001/157/124/459.png" 
+		style= "width:100px; height:100px"></img>
+
+<script>
+var courses, text, say, i;
+
+courses = ["Geology", "Fundamentals of English", "Algebra I", "Programming", "Geography"];
+text = "<ol>";
+
+if (courses > 5){say = "This is a long list.";}
+else {say = "You're a freshman.";}
+
+for (i = 0; i < 5; i++) {text += "<li>" + courses[i] + "</li>";}
+text += "</ol>";
+document.getElementById("demo").innerHTML = [say + text];
+</script>
+
+<p><a href = "index.html">Link to index.html</a>
+<p style="position:absolute;top:380px;left:22px">Nov/14/2016
+</head>
+</html>

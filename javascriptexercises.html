@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Javascript Exercises </h1>
+<h2>(1-6)</h2>
+
+<p id="demo">
+<p id="demo02">
+<p id="demo03">
+
+<p id="demo04">
+<p id="demo05">
+<p id="demo06">
+
+<script>
+
+	function max(a,b)
+	{ 
+	   if (a > b)
+	      {
+		     return a;
+		  }
+				 
+		  else 
+		  {
+		     return b;
+		  }
+	}
+	document.getElementById("demo").innerHTML = max(1,2);
+
+//-------------------Excercise 01--------------------------------------------
+
+	function maxOfThree(a,b,c)
+	{
+       if (a > b && a > c)
+	      {
+		     return a;
+		  }
+							   
+	      else if (b > a && b > c)
+		          {
+				     return b;
+				  }
+		  
+				  else 
+				  { 
+				     return c; 
+				  }
+	}
+	document.getElementById("demo02").innerHTML = maxOfThree(1,2,3);
+
+//-------------------Excercise 02--------------------------------------------
+
+	function characters(x) 
+	{
+	   var vowels = ["a","e","i","o","u"];
+	    if (x == vowels) 
+		   {
+		      return true;
+		   } 
+
+	       else 
+	 	   {
+		      return false;
+	       }
+	}
+	document.getElementById("demo03").innerHTML = characters("j");
+
+//-------------------Excercise 03--------------------------------------------
+
+	function translate(text)
+	{
+	   var string = text.toLowerCase();
+	   var vowels = ["a", "e", "i", "o", "u", " "];
+	   var y = "";
+	   for (i = 0; i < string.length; i++) 
+		   {
+			var current = string.charAt(i); 
+			 if (vowels.indexOf(current) != -1) 
+				{
+				   y = (y + (current));
+				}     
+				else
+				{
+				   y = (y + (current + "o" + current));
+				}
+	  }
+	 return y;
+    }
+	document.getElementById("demo04").innerHTML = translate("this is fun");
+
+//-------------------Excercise 04--------------------------------------------
+
+	function sum(numbers)
+	{ 
+       return numbers.reduce
+	          (function(numbers, x)
+			    { 
+			       return numbers + x ;
+			    }
+		      );
+	}
+						 
+	function multiply(numbers)
+	{ 
+	   return numbers.reduce
+		      (function(a, b)
+	            {
+	               return a * b; 
+	            }
+	          );
+	}
+	document.getElementById("demo05").innerHTML = sum([1,2,3,4]);
+	
+//-------------------Excercise 05--------------------------------------------
+
+	function reverse(text)
+	{
+       return text.split("").reverse().join("");
+	}
+    document.getElementById("demo06").innerHTML = reverse("jag testar");
+
+//-------------------Excercise 06--------------------------------------------
+
+</script>
+
+	<p><a href= "index.html">Link to index.html</a>
+	<p>Dec/15/2016
+	
+</body>
+</html>
+
